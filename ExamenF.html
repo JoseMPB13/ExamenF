@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Examen Final</title>
+<style>
+body, html {
+margin: 0;
+padding: 0;
+height: 100%;
+font-family: Arial, sans-serif;
+}
+.container {
+display: flex;
+flex-direction: column;
+height: 100%;
+}
+.top-frame {
+background-color:#4682B4;
+padding: 10px;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.content {
+display: flex;
+flex: 1;
+}
+.left-frame, .right-frame {
+padding: 10px;
+overflow: auto;
+}
+.left-frame {
+flex: 1;
+background-color: #F0F0F0;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.left-content{
+text-align: center;
+align-items: center;
+}
+.right-frame {
+flex: 2;
+background-color:  #F0F0F0;
+box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+.dropdown {
+position: relative;
+display: inline-block;
+}
+.dropbtn {
+background-color:  #333333;
+color: white;
+padding: 10px;
+font-size: 16px;
+border-radius: 8px;
+cursor: pointer;
+}
+.dropdown-content {
+display: none;
+position: absolute;
+background-color: #f9f9f9;
+min-width: 160px;
+box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+z-index: 1;
+}
+.dropdown-content a {
+color: black;
+padding: 12px 16px;
+text-decoration: none;
+display: block;
+}
+.dropdown-content a:hover {
+background-color: #f1f1f1;
+color: navy;
+}
+.show {
+display: block;
+}
+.footer {
+background-color: #003366; 
+color: white; 
+padding: 20px;
+text-align: center; 
+position: relative; 
+bottom: 0; 
+width: 100%;
+}
+.footer-content {
+max-width: 1200px; 
+margin: auto; 
+}
+</style>
+</head>
+<body>
+<div class="container">
+<div class="top-frame">
+<div class="dropdown">
+<button onclick="toggleDropdown()" class="dropbtn">Redes Sociales</button>
+<div id="myDropdown" class="dropdown-content">
+<a href="https://www.instagram.com/cristiano/" target="-blank">Instagram</a>
+<a href="https://www.facebook.com/leomessi/" target="-blank">Facebook</a>
+</div>
+</div>
+</div>
+<div class="content">
+<div class="left-frame">
+<center><h2>Formulario</h2></center>
+<form class="left-content">
+<label for="nombre">Nombre:</label><br>
+<input type="text" id="nombre" name="nombre"><br>
+<label for="email">Email:</label><br>
+<input type="email" id="email" name="email"><br>
+<label for="mensaje">Mensaje:</label><br>
+<textarea id="mensaje" name="mensaje"></textarea><br>
+<input type="submit" value="Enviar">
+</form>
+</div>
+<div class="right-frame">
+<h2>Página Externa</h2>
+<iframe src="https://portal.upds.edu.bo/updsnet/5.8/#no-back-button" width="100%" height="700" style="border: #333333;">Su navegador no soporta iframes
+</iframe>
+</div>
+</div>
+</div>
+<script>
+function toggleDropdown() {
+document.getElementById("myDropdown").classList.toggle("show");
+}
+window.onclick = function(event) {
+if (!event.target.matches('.dropbtn')) {
+var dropdowns = document.getElementsByClassName("dropdown-content");
+for (var i = 0; i < dropdowns.length; i++) {
+var openDropdown = dropdowns[i];
+if (openDropdown.classList.contains('show')) {
+openDropdown.classList.remove('show');
+}
+}
+}
+}
+</script>
+</body>
+<footer class="footer">
+<div class="footer-content">
+<p>© 2024 Jose Maria Peredo Barba. Todos los derechos reservados.</p>
+</div>
+</html>
